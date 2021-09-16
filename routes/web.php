@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RecetaController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +19,6 @@ Route::get('/', function () {
 });
 
 Route::get('/recetas', RecetaController::class);
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
